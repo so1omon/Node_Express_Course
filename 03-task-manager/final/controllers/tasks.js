@@ -17,7 +17,6 @@ const getTask = asyncWrapper(async (req, res, next) => {
   if (!task) {
     return next(createCustomError(`No task with id : ${taskID}`, 404))
   }
-
   res.status(200).json({ task })
 })
 const deleteTask = asyncWrapper(async (req, res, next) => {
